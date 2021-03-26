@@ -1,23 +1,24 @@
 {
-  "name": "simple-boilerplate",
-  "version": "1.0.0",
-  "description": "",
-  "main": "./src",
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "scripts": {
-    "clean": "rm dist/bundle.js",
-    "dev": "npm run start",
-    "start": "node scripts/server.js",
-    "legos:generate": "node scripts/generate"
-  },
-  "dependencies": {
-    "config": "^3.3.3",
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
-    "parcel-bundler": "^1.12.4",
-    "sass": "^1.32.7"
-  }
+    "name": "simple-boilerplate",
+    "version": "1.0.0",
+    "description": "",
+    "main": "./src",
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "scripts": {
+        "clean": "rm dist/bundle.js",
+        "dev": "npm run start",
+        "start": "node scripts/server.js",
+        "legos:generate": "node scripts/generate",
+        "build": "parcel build src/config/index.html"
+    },
+    "dependencies": {
+        "config": "^3.3.3",
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "parcel-bundler": "^1.12.4",
+        "sass": "^1.32.7"
+    }
 }
