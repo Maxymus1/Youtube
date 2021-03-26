@@ -1,0 +1,334 @@
+.navbar {
+    box-sizing: border-box;
+    width: 100%;
+    height: 45px;
+    background-color: #212121;
+    margin: 0;
+    font-family: Roboto;
+    display: flex;
+    justify-content: space-between;
+}
+
+@font-face {
+    font-family: Oswald;
+    src: url(./fonts/static/Oswald-SemiBold.ttf);
+}
+
+.navbar * {
+    box-sizing: inherit;
+}
+
+.start {
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+}
+
+.center {
+    display: inherit;
+    align-items: center;
+    flex-direction: row;
+    margin: 0 20px;
+    flex-basis: 550px;
+}
+
+.end {
+    display: inherit;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 20px;
+}
+
+
+/*------------------Start-box (Menu)--------------*/
+
+
+/*----Menu----*/
+
+.menu-btn {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.sidebar-menu-link {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.img-menu {
+    width: 80%;
+    height: 70%;
+    pointer-events: none;
+    transform: translateY(1px);
+}
+
+.menu-btn:active {
+    border-radius: 50%;
+    background-color: #99999955;
+}
+
+
+/*----Logo----*/
+
+.logo {
+    height: 50%;
+    padding: 0;
+    margin: 0 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.img-logo {
+    width: 22px;
+    height: 22px;
+    pointer-events: none;
+}
+
+.yt {
+    font-family: Oswald;
+    font-size: 14px;
+    font-weight: lighter;
+    color: white;
+    pointer-events: none;
+}
+
+.country {
+    font-size: 10px;
+    color: #888;
+}
+
+
+/*------------------Center-box (Search)--------------*/
+
+
+/*---------Search-Box---------*/
+
+.search {
+    width: 100%;
+    height: 25px;
+    padding-left: 10px;
+    background-color: #121212;
+    border: none;
+    border-radius: 3px 0 0 3px;
+    color: #FFFFFF;
+    font-size: 13px;
+    outline: 1px solid #FFF1;
+}
+
+.search:focus {
+    outline: 1px solid #3377FF;
+}
+
+
+/*---------Search-Button---------*/
+
+.btn-sear {
+    width: 65px;
+    height: 25px;
+    background-color: #FFFFFF14;
+    border: none;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+    outline: 1px solid #FFF1;
+}
+
+.btn-sear:hover {
+    background-color: #FFFFFF55;
+    cursor: pointer;
+}
+
+
+/*---------Voice-Search---------*/
+
+.voice {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.mic {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    margin: 5px;
+    outline: none;
+    border: none;
+    background-color: transparent;
+}
+
+.voice:hover ::after {
+    content: "Realizar búsquedas por la voz";
+    position: absolute;
+    width: 150px;
+    top: 45px;
+    left: -60px;
+    font-size: 10px;
+    color: white;
+    background-color: #666C;
+    padding: 5px 2px;
+}
+
+.mic-img {
+    width: 100%;
+    pointer-events: none;
+}
+
+
+/*----------------End-box (Opciones)------------------*/
+
+
+/*-----Crear-----*/
+
+.create {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.create:hover ::after {
+    content: "Crear";
+    position: absolute;
+    width: 35px;
+    top: 50px;
+    left: -4px;
+    font-size: 10px;
+    color: white;
+    background-color: #666C;
+    padding: 5px 2px;
+}
+
+.btn-crear {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.icon-crear {
+    position: absolute;
+    left: 5px;
+    top: 0;
+    pointer-events: none;
+    display: block;
+    width: 50%;
+    height: 100%;
+}
+
+[d] {
+    pointer-events: none;
+    fill: white;
+}
+
+
+/*-----Apps-----*/
+
+.apps {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    position: relative;
+    justify-content: center;
+}
+
+.apps:hover ::after {
+    position: absolute;
+    width: 90px;
+    top: 50px;
+    left: -25px;
+    font-size: 10px;
+    content: "Apps de Youtube";
+    color: white;
+    background-color: #666C;
+    padding: 5px 2px;
+}
+
+.img-app {
+    width: 15px;
+    height: 15px;
+    transform: translateY(2px);
+}
+
+
+/*----Notificaciones----*/
+
+.notificaciones {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notificaciones:hover {
+    .description-bubble {
+        visibility: visible;
+    }
+}
+
+.img-noti {
+    transform: translateY(2px);
+}
+
+.description-bubble {
+    position: absolute;
+    top: 50px;
+    left: -20px;
+    padding: 5px;
+    font-size: 10px;
+    color: white;
+    background-color: #666C;
+    visibility: hidden;
+}
+
+
+/*---General-Functions---*/
+
+.btn-options {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    cursor: pointer;
+}
+
+.btn-img {
+    width: 15px;
+    height: 15px;
+    pointer-events: none;
+}
+
+img.invert {
+    filter: invert(1);
+}
+
+.press:active {
+    border-radius: 50%;
+    background-color: #99999955;
+}

@@ -1,15 +1,145 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-
-  font-family: Roboto, Arial, sans-serif;
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Arial, sans-serif;
+    background-color: #181818;
+    color: white;
 }
 
 * {
-  box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 img {
-  width: 100%;
+    width: 100%;
+}
+
+.navbar-conteiner {
+    width: 100%;
+}
+
+.conteiner-gral {
+    width: 100vw;
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-template-rows: 1fr;
+    grid-template-areas: "aside contenido";
+}
+
+.asidebar-conteiner {
+    grid-area: aside;
+}
+
+.content {
+    grid-area: contenido;
+    width: 100%;
+    min-width: calc(100% - 200px);
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    flex-grow: 3;
+}
+
+.pillbar1 {
+    width: 100%;
+    height: max-content;
+}
+
+.card-wrapper {
+    width: 100%;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat( auto-fill, minmax(180px, 1fr));
+    gap: 20px;
+}
+
+.cards {
+    min-height: 180px;
+    padding-top: 90%;
+    position: relative;
+}
+
+.material-icons.white {
+    color: white
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin expandSideBar($element: ".expand") {
+    #{$element} {
+        width: 190px;
+        .option {
+            height: 35px;
+            flex-direction: row;
+            justify-content: flex-start;
+            font-size: 11px;
+        }
+        .option>span {
+            width: 50px;
+            font-size: 17px;
+            margin: 0 5px;
+            padding: 0 15px;
+        }
+    }
+    @media (max-width: 768px) and (max-width: 960px) {
+        #{$element} {
+            position: fixed;
+            top: 44px;
+            left: 0;
+            z-index: 100;
+        }
+    }
+}
+
+#menu {
+    .sidebar--open {
+        display: block;
+    }
+    .sidebar--close {
+        display: none;
+    }
+}
+
+#menu:target {
+    @include expandSideBar(".asidebar");
+    .sidebar--open {
+        display: none;
+    }
+    .sidebar--close {
+        display: block;
+    }
+}
+
+@media (max-width:481px) {
+    .card-wrapper {
+        grid-template-columns: repeat( 2, minmax(180px, 1fr));
+    }
+}
+
+@media (min-width:481px) and (max-width:769px) {
+    .card-wrapper {
+        grid-template-columns: repeat( auto-fill, minmax(180px, 1fr));
+    }
+}
+
+@media (min-width:769px) and (max-width:1024px) {
+    .card-wrapper {
+        grid-template-columns: repeat( auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (min-width:1024px) {
+    .card-wrapper {
+        grid-template-columns: repeat( 4, minmax(200px, 1fr));
+    }
 }

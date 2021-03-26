@@ -1,0 +1,101 @@
+.videomin {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 320px;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+
+.videomin .conteinervideo {
+    position: relative;
+    width: 100%;
+    height: 180px;
+}
+
+.videomin .video {
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+.videomin .hovervideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #FFFFFF;
+    z-index: 20;
+    visibility: hidden;
+}
+
+.videomin .conteinervideo:hover {
+    .hovervideo {
+        visibility: visible;
+    }
+}
+
+.videomin .controls {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+}
+
+.videomin .icon {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    font-size: 20px;
+    transform: scaleX(-1);
+    cursor: pointer;
+}
+
+.videomin .icon-control {
+    font-size: 40px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.videomin .icon-clear {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.videomin .timer {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 10px;
+}
+
+.videomin .infovideo {
+    width: 100%;
+    height: 25%;
+    background-color: #181818;
+    line-height: 12px;
+    padding: 0 10px;
+}
+
+.videomin .titulo {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.videomin .canal {
+    font-size: 10px;
+    color: #FFFFFFAA;
+}
